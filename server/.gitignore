@@ -1,0 +1,21 @@
+# Node.js dependencies
+/node_modules/
+
+# TypeScript compiled files
+/dist/
+
+# Environment files
+.env
+
+# Log files
+*.log
+
+# Debugger config
+.vscode/
+
+# IDE specific files
+.idea/
+
+# OS generated files
+.DS_Store
+Thumbs.db
