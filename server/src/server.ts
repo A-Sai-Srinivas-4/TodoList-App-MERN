@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import cors from "cors";
 import dotenv from "dotenv";
-import taskRoutes from "./routes/taskRoutes";
+import todoRoutes from "./routes/todoRoutes";
 
 dotenv.config(); // Load environment variables from .env file
 
@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
   res.send("Hello, World!");
 });
 
-app.use("/api/tasks", taskRoutes); // Use task routes
+app.use("/api/todos", todoRoutes); // Use todo routes
 
 // Error handling middleware
 app.use((err: any, req: any, res: any, next: any) => {

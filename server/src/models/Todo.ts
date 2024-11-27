@@ -1,27 +1,27 @@
 import mongoose, { Schema, Document } from "mongoose"; // Import Mongoose and its types
 
 // Define a TypeScript interface for the Task model
-interface Task extends Document {
+interface Todo extends Document {
   title: string;
-  description: string;
-  completed: boolean;
+  status: string;
+  time: string;
   createdAt: Date;
   updatedAt: Date;
 }
 
 // Define the schema for the Task model
-const taskSchema: Schema = new Schema(
+const todoSchema: Schema = new Schema(
   {
     title: {
       type: String,
       required: true, // Set the title field as required
     },
-    description: {
+    status: {
       type: String,
-      required: true, // Set the description field as required
+      required: true, // Set the status field as required
     },
-    completed: {
-      type: Boolean,
+    time: {
+      type: String,
       default: false, // Set the default value to false
     },
     createdAt: {
@@ -37,6 +37,11 @@ const taskSchema: Schema = new Schema(
 );
 
 // Create the Task model using the schema and interface
-const TaskModel = mongoose.model<Task>("Task", taskSchema); 
+const TodoModel = mongoose.model<Todo>(
+  "TodoList_DB",
+  todoSchema,
+  "TodoList_DB"
+);
+//  is a Mongoose model that represents the "Todo" collection in the "TodoList_DB" database
 
-export default TaskModel; // Export the model for use in other parts of the application
+export default TodoModel; // Export the model for use in other parts of the application
