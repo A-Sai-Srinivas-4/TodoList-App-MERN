@@ -52,11 +52,9 @@ const TodoItem = ({ todo }: TodoItemProps) => {
   };
 
   const handleDelete = () => {
-    // dispatch({
-    //   type: "DELETE_TODO",
-    //   payload: todo,
-    // });
+    // Call the deleteTodoHandler
     deleteTodoHandler(todo._id!, dispatch);
+    // deleteTodoHandler(todo.id!, dispatch); // removed the _id property for mock data server
     toast.success("Todo deleted successfully!");
   };
 

@@ -29,6 +29,7 @@ export const todoReducer = (state: any, action: Action) => {
         ...state,
         todos: state.todos.filter(
           (todo: { _id: string }) => todo._id !== action.payload // Compare directly with the payload
+          // (todo: { id: string }) => todo.id !== action.payload // removed the _id property for mock data server
         ),
       };
 
@@ -37,6 +38,8 @@ export const todoReducer = (state: any, action: Action) => {
         ...state,
         todos: state.todos.map((todo: { _id: string }) => {
           if (todo._id === action.payload._id) {
+            // todos: state.todos.map((todo: { id: string }) => { // removed the _id property for mock data server
+            // if (todo.id === action.payload.id) { // removed the _id property for mock data server
             return {
               ...todo,
               title: action.payload.title,

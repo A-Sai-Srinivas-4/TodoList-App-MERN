@@ -3,6 +3,7 @@ import { createContext, useContext } from "react"; // Import createContext
 // Define the structure of a single todo item
 export interface Todo {
   _id?: string;
+  id?: string; // for mock data server
   title: string;
   status: string;
   time: string;

@@ -70,6 +70,7 @@ const TodoModal = ({
   const handleUpdateTodo = () => {
     const updatedTodo: Todo = {
       _id: todo?._id!,
+      // id: todo?.id!, // removed the _id property for mock data server
       title,
       status,
       time: new Date().toLocaleString(),

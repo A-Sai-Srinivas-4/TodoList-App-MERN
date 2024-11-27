@@ -11,6 +11,12 @@ import {
   getTodos,
   updateTodo,
 } from "../services/todoService";
+// import {
+//   addTodo,
+//   deleteTodo,
+//   getTodos,
+//   updateTodo,
+// } from "../services/mockDataService"; // Import mock data service
 
 // Define the handlers
 export const fetchTodosHandler = async (dispatch: any) => {

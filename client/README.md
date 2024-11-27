@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## MOCK DATA SERVER 
+changes you can search with the text ("removed the _id property for mock data server")
+
+open new terminal enter this command
+ "npm install -g json-server"
+ "json-server --watch db.json --port 5004"
+
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -44,3 +52,5 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+
